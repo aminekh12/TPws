@@ -1,4 +1,6 @@
-import classes.Comptes.Compte;
+package ws;
+
+import classes.Compte;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.jws.WebService;

@@ -1,7 +1,13 @@
-package classes.Comptes;
+package classes;
+
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import java.util.Date;
 
+@XmlRootElement(name="compte")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Compte {
 
     private int code;
@@ -12,6 +18,18 @@ public class Compte {
         this.code = code;
         this.solde = solde;
         this.dateCreation = dateCreation;
+    }
+
+    public Compte() {
+           }
+
+    @Override
+    public String toString() {
+        return "Compte{" +
+                "code=" + code +
+                ", solde=" + solde +
+                ", dateCreation=" + dateCreation +
+                '}';
     }
 
     public int getCode() {
